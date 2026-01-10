@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3000;
 
 (async () => {
   try {
-    await connectDB(); // 👈 WAIT for MongoDB
+    await connectDB();
     calculatePaymentCron();
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   } catch (error) {
-    console.error("❌ Server failed to start:", error.message);
+    console.error("Server failed to start:", error.message);
     process.exit(1);
   }
 })();

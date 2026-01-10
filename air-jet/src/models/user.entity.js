@@ -18,7 +18,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// 🔐 Encrypt password before save (CORRECT)
 userSchema.pre("save", async function () {
   if (!this.isModified("password")) return;
 

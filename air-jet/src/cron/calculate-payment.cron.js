@@ -6,7 +6,7 @@ function calculatePaymentCron() {
   cron.schedule("* * * * *", async () => {
     // 0 0 * * * for every day at midnight
     try {
-      console.log("⏰ Cron running every minute", new Date());
+      console.log("Cron running every minute", new Date());
 
       const jets = await Jet.aggregate([
         {
@@ -80,7 +80,7 @@ function calculatePaymentCron() {
 
       console.log("jets", JSON.stringify(jets));
     } catch (error) {
-      console.error("❌ Cron Error", error);
+      console.error("Cron Error", error);
     }
   });
 }

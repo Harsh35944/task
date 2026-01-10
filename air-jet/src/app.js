@@ -4,6 +4,7 @@ const testRoute = require("./routes/test.router");
 const authRoute = require("./routes/auth.router");
 const jetRoute = require("./routes/jet.router");
 const bookRoute = require("./routes/book.router");
+const itemRoute = require("./routes/item.router");
 const errorMiddleware = require("./common/middlewares/error.middleware");
 
 const app = express();
@@ -16,6 +17,7 @@ app.use("/api", testRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/jet", jetRoute);
 app.use("/api/book", bookRoute);
+app.use("/api/item", itemRoute);
 
 app.use(errorMiddleware);
 

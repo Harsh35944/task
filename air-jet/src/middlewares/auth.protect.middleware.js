@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
 
     const decoded = verifyToken(token);
 
-    req.user = decoded; // attach user data to request
+    req.user = decoded;
 
     next();
   } catch (error) {

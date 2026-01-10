@@ -1,7 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
 
 module.exports = (err, req, res, next) => {
-  console.error("ERROR 💥", err);
+  console.error("ERROR", err);
 
   const statusCode = err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;
 
